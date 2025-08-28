@@ -73,7 +73,7 @@ export const Projects = () => {
 
               <div className="flex justify-between items-center mt-4">
                 <a
-                  href="https://ecommerce-app-rose-psi.vercel.app/"
+                  href="https://github.com/NKD52/AI-Agents"
                   target="_blank"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
@@ -104,7 +104,7 @@ export const Projects = () => {
 
               <div className="flex justify-between items-center mt-4">
                 <a
-                  href="https://ecommerce-app-rose-psi.vercel.app/"
+                  href="https://github.com/NKD52/Chess"
                   target="_blank"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
@@ -135,7 +135,7 @@ export const Projects = () => {
 
               <div className="flex justify-between items-center mt-4">
                 <a
-                  href="https://ecommerce-app-rose-psi.vercel.app/"
+                  href="https://nkd52.github.io/Emojidle/"
                   target="_blank"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >

@@ -1,5 +1,5 @@
 import { LoadingScreeen } from "./components/LoadingScreen";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Navbar } from "./components/sections/Navbar";
 import { MobileMenu } from "./components/sections/MobileMenu";
 import { Home } from "./components/sections/Home";
@@ -10,30 +10,32 @@ import { Contact } from "./components/sections/Contact";
 import "./index.css";
 
 function App() {
-  const [isloading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [menu, setMenuOpen] = useState(false);
 
   return (
-    <div>
-      {!isloading && (
+    <div className="overflow-x-hidden w-full">
+      {isLoading && (
         <LoadingScreeen
           onComplete={() => {
-            setIsLoading(true);
+            setIsLoading(false);
           }}
         />
       )}
 
       <div
         className={`min-h-screen transition-opacity duration-700 ${
-          isloading ? "opacity-100" : "opacity-0"
-        } bg-black text-gray-100`}
+          isLoading ? "opacity-0" : "opacity-100"
+        }  text-gray-100`}
       >
         <Navbar menuOpen={menu} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menu} setMenuOpen={setMenuOpen} />
-        <Home />
-        <About />
-        <Projects />
-        <Contact />
+        <main className="flex flex-col items-center w-full max-w-screen overflow-x-hidden">
+          <Home />
+          <About />
+          <Projects />
+          <Contact />
+        </main>
       </div>
     </div>
   );
